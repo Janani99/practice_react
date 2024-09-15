@@ -29,6 +29,7 @@ export default function ArrayOfItems() {
     }
   return (
     <div>
+        <p>Array of items</p>
          <button onClick={addItem}>add item</button>
         <ul>
             {
