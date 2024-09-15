@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function WebWorkerExample() {
    // console.log("validateSum---------11");
-
+//console.log("web worker")
     const [dark, setDark] = useState(true);
     useEffect(()=>{
         //listen for message from the user
