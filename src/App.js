@@ -15,6 +15,10 @@ import { Route, Routes } from 'react-router-dom';
 import Navigation from './navigationList';
 import Home from './home';
 import HooksNavigation from './hooks/hooksNavigation';
+import UseState from './hooks/useState/useState';
+import UseRef from './hooks/useRef/useRef'
+
+
 
 
 function App() {
@@ -27,20 +31,25 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='webworker' element={<WebWorkerExample />}></Route>
         <Route path="hooks/*" element={<HooksNavigation />}>
-          <Route path="arrayofItems" element={<ArrayOfItems />}></Route>
-          <Route path="counter" element={<Counter />}></Route>
-          <Route path="formInputs" element={<FormInput />}></Route>
-          <Route path="useEffect" element={<UseEffectSample />}></Route>
+          <Route path="useState/*" element={<UseState />}>
+            <Route path="arrayofItems" element={<ArrayOfItems />}></Route>
+            <Route path="counter" element={<Counter />}></Route>
+            <Route path="formInputs" element={<FormInput />}></Route>
+          </Route>
+          <Route path="useRef/*" element={<UseRef/>}>
           <Route path="counterRef" element={<CounterRef />}></Route>
           <Route path="focusInput" element={<FocusInput />}></Route>
           <Route path="intervalTimer" element={<IntervalTimer />}></Route>
           <Route path="timer" element={<Timer />}></Route>
+          </Route>
+          <Route path="useEffect" element={<UseEffectSample />}></Route>
           <Route path="useMemo" element={<UseMemo />}></Route>
           <Route path="useCallback" element={<Parent />}></Route>
           <Route path="useContext" element={<UseContext />}></Route>
+           
         </Route>
       </Routes>
-       
+
     </div>
   );
 }
