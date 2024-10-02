@@ -1,4 +1,9 @@
 import './App.css';
+import Home from '../src/navigation/home';
+import Details from '../src/navigation/details';
+import Profile from './navigation/profile';
+import Description from './navigation/description';
+
 import WebWorkerExample from './webWorker';
 import Counter from './hooks/useState/counter';
 import FormInput from './hooks/useState/formInput';
@@ -13,10 +18,11 @@ import Parent from './hooks/useCallback/parent';
 import UseContext from './hooks/useContext';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from './navigationList';
-import Home from './home';
+//import Home from './home';
 import HooksNavigation from './hooks/hooksNavigation';
 import UseState from './hooks/useState/useState';
 import UseRef from './hooks/useRef/useRef'
+ 
 
 
 
@@ -26,7 +32,14 @@ function App() {
   return (
     <div className="App">
       <p style={{ background: "red" }}> PRACTICE REACT </p>
-      <Navigation />
+      <Routes>
+        <Route  path="/" element={<Home/>}></Route>
+        <Route path='/details' element={<Details/>}>
+        <Route path='profile' element={<Profile/>}></Route>
+        <Route path="description" element={<Description/>}/>
+        </Route>
+      </Routes>
+      {/* <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='webworker' element={<WebWorkerExample />}></Route>
@@ -48,7 +61,7 @@ function App() {
           <Route path="useContext" element={<UseContext />}></Route>
            
         </Route>
-      </Routes>
+      </Routes> */}
 
     </div>
   );

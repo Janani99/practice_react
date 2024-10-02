@@ -10,6 +10,8 @@ export default function UseRef() {
                 <li><Link to='intervalTimer'>INTERVALTIMER</Link></li>
                 <li><Link to='timer'>TIMER</Link></li>
             </ul>
+            <Outlet/>
+
          </div>
     )
 }
