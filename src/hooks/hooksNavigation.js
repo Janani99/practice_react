@@ -17,8 +17,10 @@ const useMemoClick=()=>{
                 <li><Link to='useCallback'>USECALLBACK</Link></li>  
                 <li><Link to='useContext'>USECONTEXT</Link></li>  
                 <li><Link to='useRef'>USEREF</Link></li>  
+                <li><Link to='forwardRef'>FORWARDREF</Link></li>  
+
             </ul>
-            <button onClick={useMemoClick}>USEMEMO</button>
+            {/* <button onClick={useMemoClick}>USEMEMO</button> */}
             <Outlet/>
 
  

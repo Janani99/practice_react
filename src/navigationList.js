@@ -8,6 +8,7 @@ export default function Navigation() {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/webWorker'>WEBWORKER</Link></li>
         <li> <Link to='/hooks'>HOOKS</Link></li>
+        <li><Link to="/redux">REDUX</Link></li>
       </ul>
 
 

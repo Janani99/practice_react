@@ -22,6 +22,12 @@ import Navigation from './navigationList';
 import HooksNavigation from './hooks/hooksNavigation';
 import UseState from './hooks/useState/useState';
 import UseRef from './hooks/useRef/useRef'
+import { ForwardRefParentComponent } from './hooks/forwardRef/parent';
+import { Provider } from 'react-redux';
+import appStore from './redux/appStore';
+import Redux from './redux/redux';
+import LifecycleExample from './classComponetLifeCycle/lifecycle';
+import CustomHook from './customhook';
  
 
 
@@ -30,19 +36,25 @@ import UseRef from './hooks/useRef/useRef'
 function App() {
 
   return (
+    <Provider store={appStore}>
     <div className="App">
       <p style={{ background: "red" }}> PRACTICE REACT </p>
-      <Routes>
+       <CustomHook/>
+      {/* <LifecycleExample/> */}
+      {/* <Redux/> */}
+      {/* <Routes>
         <Route  path="/" element={<Home/>}></Route>
         <Route path='/details' element={<Details/>}>
         <Route path='profile' element={<Profile/>}></Route>
         <Route path="description" element={<Description/>}/>
         </Route>
-      </Routes>
-      {/* <Navigation />
+      </Routes> */}
+    {/* <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='webworker' element={<WebWorkerExample />}></Route>
+        <Route path='redux' element={<Redux/>}></Route>
+
         <Route path="hooks/*" element={<HooksNavigation />}>
           <Route path="useState/*" element={<UseState />}>
             <Route path="arrayofItems" element={<ArrayOfItems />}></Route>
@@ -59,11 +71,14 @@ function App() {
           <Route path="useMemo" element={<UseMemo />}></Route>
           <Route path="useCallback" element={<Parent />}></Route>
           <Route path="useContext" element={<UseContext />}></Route>
+          <Route path="forwardRef" element={<ForwardRefParentComponent/>}></Route>
+
            
         </Route>
       </Routes> */}
 
     </div>
+    </Provider>
   );
 }
 
