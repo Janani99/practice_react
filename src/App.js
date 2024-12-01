@@ -28,6 +28,11 @@ import appStore from './redux/appStore';
 import Redux from './redux/redux';
 import LifecycleExample from './classComponetLifeCycle/lifecycle';
 import CustomHook from './customhook';
+import CustomHook1 from './customHook1';
+// import {CustomHook1} from './customHook1';
+import Example from './optimumSample';
+import Virtualized from './virtualizedList';
+import Todo from './todoList';
  
 
 
@@ -39,7 +44,12 @@ function App() {
     <Provider store={appStore}>
     <div className="App">
       <p style={{ background: "red" }}> PRACTICE REACT </p>
-       <CustomHook/>
+
+<Todo/>
+      {/* <Virtualized/> */}
+      {/* <Example/> */}
+      {/* <CustomHook1/> */}
+        {/* <CustomHook/> */}
       {/* <LifecycleExample/> */}
       {/* <Redux/> */}
       {/* <Routes>

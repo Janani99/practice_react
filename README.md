@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +67,66 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+
+
+
+# User Story: Sentence Analyzer for Twitter Posts (Loop)
+
+**As a** user,  
+**I want** a tool that fetches and analyzes Twitter posts,  
+**so that** I can view processed insights like duplicate words removal, the longest word, and counts of articles and prepositions.
+
+---
+
+## Acceptance Criteria
+
+### **Feature 1: Fetch Latest Posts**
+
+1. The user clicks the "Get Latest Posts" button.
+2. Posts are fetched from the remote endpoint: `https://api.jsonbin.io/v3/b/67374026ad19ca34f8ca8b6e`.
+3. API request includes the required headers:
+   - `Content-Type`: `application/json`
+   - `X-Master-Key`: `$2a$10$zkh8bWHI.R1l1jqXc.Gl2u4UFOwSHuUTN5d4u4ZSAOu7wEsf9Pj1e`
+4. Posts are displayed in the UI after successful retrieval.
+
+---
+
+### **Feature 2: Remove Duplicate Words**
+
+1. Analyze each post to find and remove repeated or duplicated words in the text.
+
+---
+
+### **Feature 3: Find the Longest Word**
+
+1. Identify the longest word in the text of each post.
+
+---
+
+### **Feature 4: Count Articles and Prepositions**
+
+1. Count the number of **articles** (`a`, `an`, `the`) in the text of each post.
+2. Count the number of **prepositions** (`in`, `at`, `on`, `of`, `to`, `by`) in the text of each post.
+
+---
+
+### **Feature 5: Display Analyzed Information**
+
+1. The analyzed data (features 2, 3, and 4) for each post is displayed in the UI.
+2. The UI should follow the design shown in `ss-loop.jpg`.
+
+---
+
+### **Feature 6: Add New Post**
+
+1. The user can click the "Add Post" button to input a new post.
+2. The same analysis (features 2, 3, and 4) is performed on the new post.
+3. The analyzed results for the new post are displayed in the UI alongside the fetched posts.
+
+---
+
+## Notes
+
+- **Articles**: `a`, `an`, `the`.
+- **Prepositions**: `in`, `at`, `on`, `of`, `to`, `by`.
