@@ -33,7 +33,10 @@ import CustomHook1 from './customHook1';
 import Example from './optimumSample';
 import Virtualized from './virtualizedList';
 import Todo from './todoList';
- 
+import UseContextExample from './hooks/useContext1';
+import UseReducer from './hooks/useReducer/useReducer';
+import ReduxCounter from './redux1/index1';
+import  Store from './redux1/store'
 
 
 
@@ -41,11 +44,13 @@ import Todo from './todoList';
 function App() {
 
   return (
-    <Provider store={appStore}>
+    <Provider store={Store}>
     <div className="App">
       <p style={{ background: "red" }}> PRACTICE REACT </p>
-
-<Todo/>
+      <ReduxCounter/>
+      {/* <UseReducer/> */}
+      {/* <UseContextExample/> */}
+{/* <Todo/> */}
       {/* <Virtualized/> */}
       {/* <Example/> */}
       {/* <CustomHook1/> */}
